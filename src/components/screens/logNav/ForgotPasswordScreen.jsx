@@ -215,4 +215,4 @@ export default ForgotPasswordScreen;
   
 //   // Start the process immediately
 //   startIntervalProcess();
-  // above code is otp based login system
+  // above code is otp based login systems

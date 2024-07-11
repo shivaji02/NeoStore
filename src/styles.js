@@ -36,15 +36,19 @@ const styles = StyleSheet.create({
         marginTop: 10,
         color: 'blue',  
     },
-    radioB:{
+    radioB: {
         flexDirection: 'row',
-
-
+        alignItems: 'center', // Add this line to align the checkbox with other components
     },
-    checkbox:{
-        alignSelf:'flex-start',
+    checkbox: {
         margin: 10,
-        borderColor:'black',
+        borderColor: 'black',
+    },
+    checkboxView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        margin: 10,
+        alignContent:'stretch',
     },
 });
 
