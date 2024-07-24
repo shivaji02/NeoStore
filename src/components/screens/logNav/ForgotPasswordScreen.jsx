@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, TextInput, TouchableHighlight, View } from 'react-native';
+import {ScrollView, Text, TextInput, TouchableHighlight, View } from 'react-native';
 import styles from '../../../styles';
 
 const ForgotPasswordScreen = () => {
@@ -22,7 +22,9 @@ const ForgotPasswordScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
+        
+        <ScrollView style={styles.container} >
+            <Text style={styles.title}>Forgot Password</Text>
             {!showOtp && (
                 <View>
                     <TextInput
@@ -76,7 +78,7 @@ const ForgotPasswordScreen = () => {
                     </TouchableHighlight>
                 </View>
             )}
-        </View>
+        </ScrollView>
     );
 };
 

@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        keyboardShouldPersistTaps:"always"
     },
     title: {
         fontSize: 30,
@@ -49,6 +50,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 10,
         alignContent:'stretch',
+    },
+    checkboxText: {
+        fontSize: 16,
+    },
+    headBar: {
+        flexDirection: 'row',
+        height: 50,
+        backgroundColor: '#f0f0f0',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    burgerButton: {
+        fontSize: 20,
+        marginRight: 10,
     },
 });
 

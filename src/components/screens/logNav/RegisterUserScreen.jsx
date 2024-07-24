@@ -1,5 +1,5 @@
 import React, { isValidElement } from 'react'
-import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, Alert,ScrollView,Keyboard ,KeyboardAvoidingView} from 'react-native'
 import styles from '../../../styles'
 import  { useMemo, useState } from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
@@ -30,12 +30,12 @@ const RegisterUserScreen = ({ navigation }) => {
         {
             id: '1',
             label :'male',
-            value :'male',
+            value :'Male',
         },
         {
             id: '2',
             label:'female',
-            value:'FFemale',
+            value:'Female',
         }
     ]),[]);
     const [selectedId, setSelectedId] = useState();
@@ -62,7 +62,9 @@ const RegisterUserScreen = ({ navigation }) => {
     };
 
     return (
-        <View style={styles.container}>
+        <KeyboardAvoidingView style={{enabled:'true',keyboardVerticalOffset:2}}>
+            <ScrollView> 
+            <View style={styles.container}>
             <Text style={styles.title}>NeoSTORE</Text>
                     
             <TextInput style={styles.input} placeholder='First Name' onChangeText={text => {
@@ -139,6 +141,9 @@ const RegisterUserScreen = ({ navigation }) => {
         
             <Text style={styles.link} onPress={() => navigation.navigate('Login')}>Already have an account?</Text>
         </View>
+        </ScrollView>
+
+        </KeyboardAvoidingView>
     )
 }
 
